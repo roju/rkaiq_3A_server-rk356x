@@ -3,6 +3,12 @@ cmake_minimum_required(VERSION 2.8...3.22)
 project(camera_engine)
 
 set(RK_AIQ_IS_SUBDIR TRUE)
+set(RKAIQ_TARGET_SOC "rk356x")
+set(ISP_HW_VERSION "-DISP_HW_V21")
+set(RKAIQ_IQFILES_DIR "/etc/iqfiles")
+set(AIQ_BUILD_ARCH "aarch64")
+set(ARCH "aarch64")
+add_definitions(-DISP_HW_V21)
 
 if(EXISTS ${PROJECT_SOURCE_DIR}/rk_aiq)
     add_subdirectory(rk_aiq)
