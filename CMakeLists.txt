@@ -10,6 +10,10 @@ set(AIQ_BUILD_ARCH "aarch64")
 set(ARCH "aarch64")
 add_definitions(-DISP_HW_V21)
 
+if(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
+  set_property(CACHE CMAKE_INSTALL_PREFIX PROPERTY VALUE "/usr")
+endif()
+
 if(EXISTS ${PROJECT_SOURCE_DIR}/rk_aiq)
     add_subdirectory(rk_aiq)
     set(AIQ_DIR ${PROJECT_SOURCE_DIR}/rk_aiq)

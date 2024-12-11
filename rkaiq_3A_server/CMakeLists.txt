@@ -21,7 +21,7 @@ PROJECT(rkaiq_3A_server)
 #if(BUILDROOT_BUILD_PROJECT)
     # buildroot will set the compiler
 #else()
-#    SET(CMAKE_C_COMPILER "/home/camera/camera/rv1109_sdk/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc") 
+#    SET(CMAKE_C_COMPILER "/home/camera/camera/rv1109_sdk/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc")
 #    SET(CMAKE_CXX_COMPILER "/home/camera/camera/rv1109_sdk/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/arm-linux-gnueabihf-g++")
 #endif()
 
@@ -134,11 +134,11 @@ if(BUILDROOT_BUILD_PROJECT)
 		WORLD_EXECUTE WORLD_READ)
 else()
 	install(TARGETS rkaiq_3A_server
-		RUNTIME DESTINATION "usr/bin"
-		LIBRARY DESTINATION "usr/lib"
+		RUNTIME DESTINATION "bin"
+		LIBRARY DESTINATION "lib"
 		)
 
-	install(FILES S40rkaiq_3A DESTINATION "etc/init.d"
+	install(FILES S40rkaiq_3A DESTINATION "/etc/init.d"
 		PERMISSIONS OWNER_EXECUTE OWNER_WRITE OWNER_READ
 		GROUP_EXECUTE GROUP_READ
 		WORLD_EXECUTE WORLD_READ)

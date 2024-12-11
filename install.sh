@@ -3,5 +3,4 @@
 mkdir build
 set -e
 cd build
-cmake ..
-make -j4
+sudo make install
